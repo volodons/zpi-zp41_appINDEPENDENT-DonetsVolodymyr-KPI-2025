@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Практика</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: #f0f0f0;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                color: #2c3e50;
+                text-align: center;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+
+            .custom-link {
+                color: #3498db;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .custom-link:hover {
+                color: #2980b9;
+                text-decoration: underline;
+            }
+
+            .custom-list {
+                list-style-type: square;
+                padding-left: 20px;
+            }
+
+            .responsive-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+
+            .responsive-table th,
+            .responsive-table td {
+                border: 1px solid #ddd;
+                padding: 12px;
+                text-align: left;
+            }
+
+            .responsive-table th {
+                background-color: #3498db;
+                color: white;
+            }
+
+            .custom-button {
+                padding: 10px 20px;
+                background-color: #2ecc71;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .custom-button:hover {
+                background-color: #27ae60;
+                transform: scale(1.05);
+            }
+
+            .tooltip {
+                position: relative;
+                display: inline-block;
+            }
+
+            .tooltip .tooltip-text {
+                visibility: hidden;
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding: 5px;
+                border-radius: 6px;
+                position: absolute;
+                z-index: 1;
+                bottom: 125%;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            .tooltip:hover .tooltip-text {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            @keyframes slide {
+                from {
+                    transform: translateX(-100%);
+                }
+                to {
+                    transform: translateX(0);
+                }
+            }
+
+            .animated-element {
+                animation: slide 1s ease-out;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="../index.html">&#x2190;На головну сторінку</a>
+        </nav>
+        <main class="container">
+            <h1 class="animated-element">CSS Практика</h1>
+
+            <div class="tooltip">
+                Наведіть курсор сюди
+                <span class="tooltip-text">Це підказка!</span>
+            </div>
+
+            <ul class="custom-list">
+                <li><a href="#" class="custom-link">Посилання 1</a></li>
+                <li><a href="#" class="custom-link">Посилання 2</a></li>
+                <li><a href="#" class="custom-link">Посилання 3</a></li>
+            </ul>
+
+            <table class="responsive-table">
+                <tr>
+                    <th>Заголовок 1</th>
+                    <th>Заголовок 2</th>
+                </tr>
+                <tr>
+                    <td>Дані 1</td>
+                    <td>Дані 2</td>
+                </tr>
+            </table>
+
+            <button class="custom-button">Натисніть мене</button>
+        </main>
+    </body>
+</html>
