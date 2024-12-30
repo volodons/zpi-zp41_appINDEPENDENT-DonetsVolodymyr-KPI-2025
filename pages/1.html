@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML Практика</title>
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 5px;
+            }
+            .visited-link:visited {
+                color: purple;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="../index.html">&#x2190;На головну сторінку</a>
+        </nav>
+        <main>
+            <h1>HTML Практика</h1>
+
+            <h2 id="section1">1. Текст та посилання</h2>
+            <p>
+                Це приклад параграфу в HTML. <br />
+                Цей текст починається з нового рядка.
+            </p>
+            <a href="https://w3schoolsua.github.io" class="visited-link">Відвідати W3Schools</a>
+
+            <h2>2. Зображення</h2>
+            <img src="https://picsum.photos/200/300" alt="Приклад зображення" width="300" height="200" />
+
+            <h2>3. Таблиця</h2>
+            <table>
+                <colgroup>
+                    <col style="background-color: #f1f1f1" />
+                    <col style="background-color: #ffffff" />
+                </colgroup>
+                <tr>
+                    <th colspan="2">Заголовок таблиці</th>
+                </tr>
+                <tr>
+                    <td>Комірка 1</td>
+                    <td>Комірка 2</td>
+                </tr>
+            </table>
+
+            <h2>4. Списки</h2>
+            <ul>
+                <li>Невпорядкований список</li>
+                <li>Пункт 2</li>
+            </ul>
+            <ol>
+                <li>Впорядкований список</li>
+                <li>Пункт 2</li>
+            </ol>
+
+            <h2>5. Форма</h2>
+            <form action="/submit" method="post">
+                <label for="name">Ім'я:</label><br />
+                <input type="text" id="name" name="name" required /><br />
+
+                <label for="email">Email:</label><br />
+                <input type="email" id="email" name="email" /><br />
+
+                <label for="message">Повідомлення:</label><br />
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br />
+
+                <input type="submit" value="Відправити" />
+            </form>
+        </main>
+    </body>
+</html>
